@@ -11,11 +11,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-6 pb-6 w-full overflow-hidden">
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="flex flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-0">
             
             {/* Left Content */}
-            <div className="w-1/2 pr-4 flex flex-col justify-center">
-              <h1 className="text-6xl font-extrabold tracking-tight text-black leading-[1.1] mb-3">
+            <div className="w-full md:w-1/2 pr-0 md:pr-4 flex flex-col justify-center text-center md:text-left">
+              <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-black leading-[1.1] mb-3">
                 Tus metas financieras son
                 <span className="relative inline-block ml-2">
                   las nuestras
@@ -23,16 +23,16 @@ export default function Home() {
                 </span>
               </h1>
               
-              <p className="text-base text-black mb-4 max-w-md font-medium leading-snug">
+              <p className="text-base text-black mb-6 max-w-md font-medium leading-snug mx-auto md:mx-0">
                 Préstamos accesibles de $300 a $10,000 para que llegues hasta donde quieras.
               </p>
 
-              <div className="flex flex-col items-start gap-4">
-                <div className="flex flex-row flex-wrap gap-3">
-                  <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-4 py-2 rounded-[30px] text-base w-auto">
+              <div className="flex flex-col items-center md:items-start gap-4">
+                <div className="flex flex-col md:flex-row flex-wrap gap-3 w-full md:w-auto">
+                  <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-4 py-6 md:py-2 rounded-[30px] text-base w-full md:w-auto">
                     <Link href="/apply">Aplicar para un préstamo</Link>
                   </Button>
-                  <Button asChild variant="outline" className="border-2 border-black text-black hover:bg-gray-100 font-bold px-4 py-2 rounded-[30px] text-base w-auto flex items-center">
+                  <Button asChild variant="outline" className="border-2 border-black text-black hover:bg-gray-100 font-bold px-4 py-6 md:py-2 rounded-[30px] text-base w-full md:w-auto flex items-center justify-center">
                     <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-1.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                       Hablar por WhatsApp
@@ -40,7 +40,7 @@ export default function Home() {
                   </Button>
                 </div>
                 
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 text-center md:text-left mt-2">
                   <p className="font-bold text-black text-base">
                     Precalifica en minutos sin afectar tu puntaje de crédito.
                   </p>
@@ -52,8 +52,8 @@ export default function Home() {
             </div>
 
             {/* Right Content (Video) */}
-            <div className="w-1/2 relative flex items-center justify-end py-2">
-              <div className="relative rounded-[16px] overflow-hidden shadow-[0_12px_40px_rgb(0,0,0,0.15)] max-w-[220px] w-full aspect-[9/16] bg-black border-[4px] border-black">
+            <div className="w-full md:w-1/2 relative flex items-center justify-center md:justify-end py-2">
+              <div className="relative rounded-[16px] overflow-hidden shadow-[0_12px_40px_rgb(0,0,0,0.15)] max-w-[280px] md:max-w-[220px] w-full aspect-[9/16] bg-black border-[4px] border-black">
                 {/* Phone Notch (Optional, for aesthetics) */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40px] h-[10px] bg-black rounded-b-[8px] z-20"></div>
                 <video 
@@ -75,10 +75,10 @@ export default function Home() {
       {/* Two Main Cards */}
       <section className="pb-4 pt-1 w-full">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-row gap-4 w-full">
+          <div className="flex flex-col md:flex-row gap-4 w-full">
             
-            <div className="border border-gray-300 rounded-[10px] py-1.5 px-2 flex flex-col items-center justify-center text-center w-1/2">
-              <div className="mb-1">
+            <div className="border border-gray-300 rounded-[10px] py-4 md:py-1.5 px-4 md:px-2 flex flex-col items-center justify-center text-center w-full md:w-1/2">
+              <div className="mb-2 md:mb-1">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/>
                 </svg>
@@ -90,8 +90,8 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="border border-gray-300 rounded-[10px] py-1.5 px-2 flex flex-col items-center justify-center text-center w-1/2">
-              <div className="mb-1">
+            <div className="border border-gray-300 rounded-[10px] py-4 md:py-1.5 px-4 md:px-2 flex flex-col items-center justify-center text-center w-full md:w-1/2">
+              <div className="mb-2 md:mb-1">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><path d="M16 11h.01"/>
                 </svg>
@@ -114,24 +114,24 @@ export default function Home() {
             Hemos hecho amigos en el camino
           </h2>
           
-          <div className="flex flex-row justify-between items-start gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-4">
             
             {/* Stat 1 */}
-            <div className="flex flex-col items-center text-center w-1/3">
+            <div className="flex flex-col items-center text-center w-full md:w-1/3">
               <svg className="w-6 h-6 text-[#00d65f] mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
               <p className="text-base font-bold mb-1">9 de cada 10 miembros</p>
               <Link href="/reviews" className="text-sm underline hover:text-gray-300">Ver más</Link>
             </div>
 
             {/* Stat 2 */}
-            <div className="flex flex-col items-center text-center w-1/3">
+            <div className="flex flex-col items-center text-center w-full md:w-1/3">
               <svg className="w-6 h-6 text-[#00d65f] mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
               <p className="text-base font-bold mb-1">115,000 reseñas de 5 estrellas</p>
               <Link href="/reviews" className="text-sm underline hover:text-gray-300">Leer más</Link>
             </div>
 
             {/* Stat 3 */}
-            <div className="flex flex-col items-center text-center w-1/3">
+            <div className="flex flex-col items-center text-center w-full md:w-1/3">
               <svg className="w-6 h-6 text-[#00d65f] mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M2 15h10"></path><path d="M9 18l3-3-3-3"></path></svg>
               <p className="text-base font-bold italic mb-1 px-1">«Todo el proceso fue extremadamente fácil.»</p>
               <p className="text-sm text-gray-400">Claudia M., de Google</p>
@@ -145,10 +145,10 @@ export default function Home() {
       {/* Family Loans Section */}
       <section className="bg-white py-8 w-full">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-row items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-6">
             
             {/* Left: Image */}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2 order-2 md:order-1">
               <img 
                 src="/images/family.jpg" 
                 alt="Familia cocinando feliz" 
@@ -157,8 +157,8 @@ export default function Home() {
             </div>
 
             {/* Right: Content */}
-            <div className="w-1/2 flex flex-col">
-              <h2 className="text-2xl font-extrabold text-black leading-tight mb-4">
+            <div className="w-full md:w-1/2 flex flex-col order-1 md:order-2">
+              <h2 className="text-3xl md:text-2xl font-extrabold text-black leading-tight mb-4 text-center md:text-left">
                 Préstamos personales para todo tipo de metas
               </h2>
               
@@ -191,8 +191,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-4 py-1.5 rounded-[20px] text-base">
+              <div className="flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-3 mt-4">
+                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-6 md:py-1.5 rounded-[20px] text-base w-full md:w-auto">
                   <Link href="/apply">Aplicar ahora</Link>
                 </Button>
                 <Link href="/loans" className="text-base font-bold text-black underline hover:text-gray-600">
@@ -208,14 +208,14 @@ export default function Home() {
       {/* Extra Large Loan Section (Added as requested) */}
       <section className="bg-[#f9fafb] py-8 w-full border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-2xl font-extrabold text-black leading-tight mb-4 max-w-sm">
+          <h2 className="text-3xl md:text-2xl font-extrabold text-black leading-tight mb-8 md:mb-4 max-w-sm mx-auto md:mx-0 text-center md:text-left">
             Y qué tal si necesitas un préstamo mayor
           </h2>
           
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-6">
             
             {/* Left Content */}
-            <div className="w-1/2 flex flex-col gap-3">
+            <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-3 order-2 md:order-1">
               {/* Bullet 1 */}
               <div className="flex items-start gap-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="mt-0.5 shrink-0"><path d="M12 5v14M5 12h14"/></svg>
@@ -243,19 +243,19 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-2">
-                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-4 py-1.5 rounded-[20px] text-base">
+              <div className="mt-4 md:mt-2">
+                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-6 md:py-1.5 rounded-[20px] text-base w-full md:w-auto">
                   <Link href="/loans#title-loans">Más información</Link>
                 </Button>
               </div>
 
-              <p className="text-xs text-black leading-tight mt-6 max-w-[280px]">
+              <p className="text-xs text-gray-500 leading-tight mt-6 max-w-full md:max-w-[280px] text-center md:text-left">
                 Disponible en Arizona, California, Florida, Illinois, Nevada, New Jersey, Texas, y Utah
               </p>
             </div>
 
             {/* Right Content */}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2 order-1 md:order-2">
               <img 
                 src="/images/car_family.jpg" 
                 alt="Familia sonriendo dentro de un auto" 
@@ -277,16 +277,16 @@ export default function Home() {
       {/* 3 Maneras Section */}
       <section className="bg-white py-8 w-full pb-16">
         <div className="container mx-auto px-4 max-w-7xl flex flex-col items-center">
-          <h2 className="text-2xl font-extrabold text-black mb-8 text-center">
+          <h2 className="text-3xl md:text-2xl font-extrabold text-black mb-10 md:mb-8 text-center">
             3 maneras de aplicar a un préstamo
           </h2>
-          <div className="flex flex-row justify-center items-start gap-16 w-full max-w-2xl">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16 w-full max-w-2xl">
             
             {/* En persona */}
             <div className="flex flex-col items-center text-center gap-2">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mb-1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span className="text-sm font-bold text-black mb-3">En persona</span>
-              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-2 rounded-[20px] text-sm">
+              <span className="text-base md:text-sm font-bold text-black mb-3">En persona</span>
+              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-8 md:px-6 py-6 md:py-2 rounded-[30px] md:rounded-[20px] text-base md:text-sm w-full md:w-auto min-w-[200px]">
                 <Link href="/locations">Sucursales</Link>
               </Button>
             </div>
@@ -294,8 +294,8 @@ export default function Home() {
             {/* Por teléfono */}
             <div className="flex flex-col items-center text-center gap-2">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mb-1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span className="text-sm font-bold text-black mb-3">Por WhatsApp</span>
-              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-2 rounded-[20px] text-sm">
+              <span className="text-base md:text-sm font-bold text-black mb-3">Por WhatsApp</span>
+              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-8 md:px-6 py-6 md:py-2 rounded-[30px] md:rounded-[20px] text-base md:text-sm w-full md:w-auto min-w-[200px]">
                 <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
                   Contactar Asesor
                 </Link>
@@ -305,8 +305,8 @@ export default function Home() {
             {/* En línea */}
             <div className="flex flex-col items-center text-center gap-2">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mb-1"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
-              <span className="text-sm font-bold text-black mb-3">En línea</span>
-              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-2 rounded-[20px] text-sm">
+              <span className="text-base md:text-sm font-bold text-black mb-3">En línea</span>
+              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-8 md:px-6 py-6 md:py-2 rounded-[30px] md:rounded-[20px] text-base md:text-sm w-full md:w-auto min-w-[200px]">
                 <Link href="/apply">Aplicar ahora</Link>
               </Button>
             </div>
@@ -316,50 +316,50 @@ export default function Home() {
       </section>
 
       {/* Set & Save Section */}
-      <section className="bg-[#fcfaf9] py-12 w-full border-t border-gray-100">
-        <div className="container mx-auto px-4 max-w-7xl flex flex-row items-center gap-12">
-          <div className="w-1/2 flex flex-col gap-6">
-            <h2 className="text-4xl font-extrabold text-black leading-tight max-w-sm">
+      <section className="bg-[#fcfaf9] py-12 md:py-16 w-full border-t border-gray-100">
+        <div className="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/2 flex flex-col gap-6 order-2 md:order-1 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black leading-tight max-w-sm mx-auto md:mx-0">
               Set & Save™ te ayuda a ahorrar sin pensarlo
             </h2>
             <div className="flex flex-col gap-4 mt-2">
               <div className="flex items-start gap-3">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mt-0.5 shrink-0"><path d="M12 5v14M5 12h14"/></svg>
-                <div>
-                  <h3 className="text-base font-bold text-black mb-0.5">Una forma más inteligente de ahorrar</h3>
-                  <p className="text-sm text-black leading-snug pr-4">Establece tus metas de ahorro y nos pondremos a trabajar para que las logres</p>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mt-0.5 shrink-0 mx-auto md:mx-0"><path d="M12 5v14M5 12h14"/></svg>
+                <div className="text-center md:text-left">
+                  <h3 className="text-base font-bold text-black mb-1">Una forma más inteligente de ahorrar</h3>
+                  <p className="text-sm text-gray-600 leading-snug pr-0 md:pr-4">Establece tus metas de ahorro y nos pondremos a trabajar para que las logres</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mt-0.5 shrink-0"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
-                <div>
-                  <h3 className="text-base font-bold text-black mb-0.5">Cantidades estratégicas, ahorradas de a pocos</h3>
-                  <p className="text-sm text-black leading-snug pr-4">Set & Save aprende tus hábitos de gastos y transfiere dinero inteligentemente a tu cuenta de ahorros</p>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mt-0.5 shrink-0 mx-auto md:mx-0"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                <div className="text-center md:text-left">
+                  <h3 className="text-base font-bold text-black mb-1">Cantidades estratégicas, ahorradas de a pocos</h3>
+                  <p className="text-sm text-gray-600 leading-snug pr-0 md:pr-4">Set & Save aprende tus hábitos de gastos y transfiere dinero inteligentemente a tu cuenta de ahorros</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mt-0.5 shrink-0"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <div>
-                  <h3 className="text-base font-bold text-black mb-0.5">En promedio, nuestros miembros ahorran más de $1,800 al año*</h3>
-                  <p className="text-sm text-black leading-snug pr-4">Suma más rápido de lo que imaginas</p>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mt-0.5 shrink-0 mx-auto md:mx-0"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <div className="text-center md:text-left">
+                  <h3 className="text-base font-bold text-black mb-1">En promedio, nuestros miembros ahorran más de $1,800 al año*</h3>
+                  <p className="text-sm text-gray-600 leading-snug pr-0 md:pr-4">Suma más rápido de lo que imaginas</p>
                 </div>
               </div>
             </div>
-            <div className="mt-2">
-              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-2 rounded-[20px] text-sm">
+            <div className="mt-4 md:mt-2">
+              <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-6 md:py-2 rounded-[30px] md:rounded-[20px] text-base md:text-sm w-full md:w-auto">
                 <Link href="/savings">Más información</Link>
               </Button>
             </div>
           </div>
-          <div className="w-1/2 bg-[#ffe7e5] rounded-[24px] p-8 flex justify-center items-center shadow-sm">
+          <div className="w-full md:w-1/2 bg-[#ffe7e5] rounded-[24px] p-8 flex justify-center items-center shadow-sm order-1 md:order-2">
              <img src="/images/app_graphic.jpg" alt="App Set and Save" className="w-full max-w-[280px] mix-blend-multiply opacity-90" />
           </div>
         </div>
       </section>
 
       {/* Badges Section */}
-      <section className="bg-white py-16 w-full">
-        <div className="container mx-auto px-4 max-w-4xl flex flex-row justify-between items-start gap-8">
+      <section className="bg-white py-12 md:py-16 w-full">
+        <div className="container mx-auto px-4 max-w-4xl flex flex-col md:flex-row justify-between items-center gap-12 md:gap-8">
           <div className="flex flex-col items-center text-center flex-1 gap-4">
              <div className="h-[60px] w-auto bg-black text-white flex items-center justify-center font-black text-xl rounded border border-gray-800 px-6 tracking-widest shadow-sm">BBB</div>
              <p className="text-xs font-bold text-black max-w-[120px] leading-tight">Calificación A+ del Better Business Bureau (BBB)</p>
@@ -381,10 +381,10 @@ export default function Home() {
       {/* Blog Section */}
       <section className="bg-white pt-8 pb-12 w-full border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-4xl font-extrabold text-black text-center mb-10 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-10 tracking-tight">
             La guía de dinero de Avanza Financial
           </h2>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-4 group cursor-pointer">
               <div className="overflow-hidden rounded-[16px] shadow-sm">
                 <img src="/images/family.jpg" className="w-full h-[140px] object-cover group-hover:scale-105 transition-transform duration-500" alt="Préstamos con garantía" />
@@ -410,7 +410,7 @@ export default function Home() {
             <div className="h-2 w-2 bg-gray-200 border border-black rounded-full"></div>
           </div>
           <div className="flex justify-center mt-8">
-            <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-2 rounded-full text-sm">
+            <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-8 md:px-6 py-6 md:py-2 rounded-full text-base md:text-sm w-full md:w-auto">
               <Link href="/blog">Ver educación financiera</Link>
             </Button>
           </div>
@@ -420,17 +420,17 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="bg-white py-12 w-full border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-row gap-8 items-start">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-8 items-center md:items-start">
             
             {/* Left Content */}
-            <div className="w-1/2">
-              <h2 className="text-3xl font-extrabold text-black mb-2">Eso es todo</h2>
-              <p className="text-base font-medium text-black mb-6 max-w-md leading-snug">
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h2 className="text-3xl font-extrabold text-black mb-4 md:mb-2">Eso es todo</h2>
+              <p className="text-base font-medium text-black mb-8 md:mb-6 max-w-md leading-snug mx-auto md:mx-0">
                 ¿Todavía tienes preguntas? Aquí hay algunas que ya hemos respondido.
               </p>
 
               {/* Tabs */}
-              <div className="flex flex-row flex-wrap gap-x-4 gap-y-2 mb-6">
+              <div className="flex flex-row flex-wrap justify-center md:justify-start gap-x-4 gap-y-3 mb-8 md:mb-6">
                 <span className="text-sm font-bold text-black border-b border-black pb-0.5 cursor-pointer">Ahorros</span>
                 <span className="text-sm text-gray-500 cursor-pointer hover:text-black">Establecer crédito</span>
                 <span className="text-sm text-gray-500 cursor-pointer hover:text-black">Pagos</span>
@@ -456,15 +456,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-6">
-                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-6 py-2 rounded-[20px] text-sm">
+              <div className="mt-8 md:mt-6">
+                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-8 md:px-6 py-6 md:py-2 rounded-[30px] md:rounded-[20px] text-base md:text-sm w-full md:w-auto">
                   <Link href="/terms">Leer más</Link>
                 </Button>
               </div>
             </div>
 
             {/* Right Image */}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <div className="rounded-[16px] overflow-hidden shadow-sm w-full h-[400px]">
                 <img 
                   src="/images/family.jpg" 
@@ -479,8 +479,8 @@ export default function Home() {
       </section>
 
       {/* Bankrate Section */}
-      <section className="bg-[#fcfaf9] py-12 w-full border-t border-gray-100">
-        <div className="container mx-auto px-4 max-w-7xl flex flex-row items-center justify-center gap-6">
+      <section className="bg-[#fcfaf9] py-12 md:py-16 w-full border-t border-gray-100">
+        <div className="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6">
           <div className="relative">
             {/* Badge Graphic */}
             <div className="bg-black text-white px-5 py-5 rounded-t-none rounded-b-[20px] flex flex-col items-center justify-center relative clip-badge w-[80px]">
@@ -509,8 +509,8 @@ export default function Home() {
             `}</style>
           </div>
           
-          <div className="text-left flex flex-col md:flex-row items-baseline gap-2">
-            <h2 className="text-4xl font-extrabold text-black tracking-tight">
+          <div className="text-center md:text-left flex flex-col items-center md:items-baseline gap-2">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-black tracking-tight">
               La app #1 en ahorros de 2025 según 
             </h2>
             <div className="flex items-center text-gray-500 font-bold text-5xl tracking-tight">

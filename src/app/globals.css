@@ -34,13 +34,6 @@
   --color-avanza-success: #00c853;
   --color-avanza-warning: #FF7D00;
   --color-avanza-error: #F53F3F;
-  
-  /* Font size overrides to make everything bigger */
-  --text-xs: 0.875rem;
-  --text-sm: 1rem;
-  --text-base: 1.125rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
 }
 
 :root {
@@ -102,6 +95,5 @@
   }
   html {
     @apply font-sans;
-    font-size: 18px;
   }
 }
