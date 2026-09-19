@@ -76,11 +76,26 @@ export default function Step5Financial() {
 
       <form onSubmit={onSubmit} className="space-y-6 max-w-sm mx-auto">
         <div className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="requestedAmount" className="text-base">Monto solicitado *</Label>
-            <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
-              <Input id="requestedAmount" type="number" required min="500" max="10000" className="h-12 text-lg pl-8" placeholder="3000" value={formData.requestedAmount} onChange={handleChange} />
+          <div className="space-y-4">
+            <Label htmlFor="requestedAmount" className="text-base flex justify-between">
+              <span>Monto solicitado *</span>
+              <span className="font-bold text-[#00d65f] text-xl">${Number(formData.requestedAmount || 3000).toLocaleString('en-US')}</span>
+            </Label>
+            <div className="pt-2 pb-4">
+              <input 
+                id="requestedAmount" 
+                type="range" 
+                min="500" 
+                max="10000" 
+                step="100"
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#00d65f]" 
+                value={formData.requestedAmount || 3000} 
+                onChange={handleChange} 
+              />
+              <div className="flex justify-between text-xs text-muted-foreground mt-2 font-medium">
+                <span>$500</span>
+                <span>$10,000</span>
+              </div>
             </div>
           </div>
 

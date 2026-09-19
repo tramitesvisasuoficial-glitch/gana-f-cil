@@ -95,7 +95,26 @@ export default function Step2Personal() {
 
           <div className="space-y-2">
             <Label htmlFor="phone" className="text-base">Número de teléfono *</Label>
-            <Input id="phone" type="tel" required className="h-12 text-lg" placeholder="(555) 555-5555" value={formData.phone} onChange={handleChange} />
+            <Input 
+              id="phone" 
+              type="tel" 
+              required 
+              className="h-12 text-lg" 
+              placeholder="(555) 555-5555" 
+              value={formData.phone} 
+              onChange={(e) => {
+                let input = e.target.value.replace(/\D/g, '').substring(0, 10);
+                let formatted = input;
+                if (input.length > 6) {
+                  formatted = `(${input.substring(0, 3)}) ${input.substring(3, 6)}-${input.substring(6, 10)}`;
+                } else if (input.length > 3) {
+                  formatted = `(${input.substring(0, 3)}) ${input.substring(3, 6)}`;
+                } else if (input.length > 0) {
+                  formatted = `(${input}`;
+                }
+                setFormData(prev => ({ ...prev, phone: formatted }));
+              }} 
+            />
           </div>
         </div>
 

@@ -41,7 +41,7 @@ export default function Step4Employment() {
         body: JSON.stringify({
           employmentStatus: formData.employmentStatus,
           employer: formData.employer,
-          monthlyIncome: formData.monthlyIncome ? parseFloat(formData.monthlyIncome) : 0,
+          monthlyIncome: formData.monthlyIncome ? parseFloat(formData.monthlyIncome.replace(/,/g, '')) : 0,
           incomeFrequency: formData.incomeFrequency,
         }),
       });
@@ -103,7 +103,21 @@ export default function Step4Employment() {
             <Label htmlFor="monthlyIncome" className="text-base">Monto de ingresos *</Label>
             <div className="relative">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
-              <Input id="monthlyIncome" type="number" required min="0" className="h-12 text-lg pl-8" placeholder="0" value={formData.monthlyIncome} onChange={handleChange} />
+              <Input 
+                id="monthlyIncome" 
+                type="text" 
+                required 
+                className="h-12 text-lg pl-8" 
+                placeholder="0" 
+                value={formData.monthlyIncome} 
+                onChange={(e) => {
+                  let val = e.target.value.replace(/\D/g, '');
+                  if (val) {
+                    val = Number(val).toLocaleString('en-US');
+                  }
+                  setFormData(prev => ({ ...prev, monthlyIncome: val }));
+                }} 
+              />
             </div>
           </div>
 
