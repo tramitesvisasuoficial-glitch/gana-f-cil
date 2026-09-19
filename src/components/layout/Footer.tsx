@@ -47,13 +47,12 @@ export function Footer() {
           <div className="flex-[1.2] min-w-0">
             <h3 className="font-extrabold text-base mb-4 truncate">Contáctanos</h3>
             <ul className="space-y-3 text-sm text-gray-600 font-medium">
-              <li><span className="font-bold text-black block truncate">Préstamos</span></li>
+              <li><span className="font-bold text-black block truncate">Avanza Financial</span></li>
+              <li><span className="hover:text-black block leading-snug">Suite 200, 123 Business Blvd<br/>Miami, FL 33131</span></li>
+              <li className="pt-2"><span className="font-bold text-black block truncate">Préstamos</span></li>
               <li><span className="hover:text-black block truncate">(555) 123-4567</span></li>
               <li><Link href="mailto:hola@avanzafinancial.com" className="hover:text-black block truncate">hola@Avanza...com</Link></li>
               <li><Link href="/admin" className="hover:text-black block truncate">Iniciar sesión</Link></li>
-              <li className="pt-2"><span className="font-bold text-black block truncate">Set & Save</span></li>
-              <li><span className="hover:text-black block truncate">(555) 987-6543</span></li>
-              <li><Link href="mailto:hola@avanzafinancial.com" className="hover:text-black block truncate">hola@Avanza...com</Link></li>
             </ul>
           </div>
 
@@ -110,9 +109,9 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4 mb-8 w-full">
             <h3 className="font-extrabold text-2xl tracking-tight">Avanza Financial</h3>
             <div className="flex flex-row items-center justify-start md:justify-end gap-x-6 flex-wrap flex-1 text-left md:text-right">
-              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Condiciones de uso</Link>
-              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Privacidad</Link>
-              <Link href="/terms" className="text-sm text-gray-500 hover:text-black max-w-[80px] leading-snug text-center">Configuración de privacidad</Link>
+              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Términos de uso</Link>
+              <Link href="/privacy" className="text-sm text-gray-500 hover:text-black">Privacidad</Link>
+              <Link href="/privacy" className="text-sm text-gray-500 hover:text-black max-w-[80px] leading-snug text-center">Configuración de privacidad</Link>
               <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Accesibilidad</Link>
               <div className="w-6 h-6 border-[1.5px] border-black flex justify-center items-center shrink-0"><span className="text-base font-bold leading-none">⌂</span></div>
             </div>
@@ -136,7 +135,7 @@ export function Footer() {
               Información sobre la compañía financiera: Los préstamos personales en NM y WI son otorgados por Avanza Financial Inc. En los demás estados donde opera Avanza Financial de AL, AK, AR, AZ, CA, DE, FL, GA, HI, ID, IL, IN, KS, KY, LA, MI, MN, MO, MS, MT, NC, ND, NE, NH, NJ, NV, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, VT, and WY los préstamos a través de Avanza Financial son originados por Pathward®, N.A., Column N.A., Miembro de la FDIC, o ambas entidades.
             </p>
             <p className="mb-6 ml-4">
-              ESTA ES SOLO UNA SOLICITUD DE PRÉSTAMO. AVANZA FINANCIAL PUEDE NO SER EL PRESTAMISTA. LA INFORMACIÓN RECIBIDA SE COMPARTIRÁ CON PATHWARD, N.A. O COLUMN EN RELACIÓN CON SU SOLICITUD DE PRÉSTAMO. EL PRESTAMISTA PUEDE NO ESTAR SUJETO A TODAS LAS LEYES DE PRÉSTAMOS DE VERMONT U OTROS ESTADOS. EL PRESTAMISTA PUEDE ESTAR SUJETO A LAS LEYES FEDERALES DE PRÉSTAMOS.
+              ESTA ES SOLO UNA SOLICITUD DE PRÉSTAMO. AVANZA FINANCIAL NO ES UN PRESTAMISTA DIRECTO NI TOMA DECISIONES CREDITICIAS. NUESTRO SERVICIO ES CONECTAR A LOS SOLICITANTES CON UNA RED DE PRESTAMISTAS Y BANCOS ASOCIADOS INDEPENDIENTES. LA APROBACIÓN FINAL Y LOS TÉRMINOS SERÁN DETERMINADOS EXCLUSIVAMENTE POR EL PRESTAMISTA QUE LO APRUEBE. ESTE SERVICIO ES GRATUITO PARA LOS USUARIOS (RECIBIMOS COMPENSACIÓN DE NUESTROS SOCIOS).
             </p>
 
             <p className="mb-4">
