@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { z } from "zod";
+import { randomUUID } from "crypto";
 
 const step1Schema = z.object({
   zipCode: z.string().min(5),
@@ -12,13 +13,12 @@ export async function POST(req: Request) {
     const data = await req.json();
     const validatedData = step1Schema.parse(data);
 
-    // Create a generic demo user for this draft application
-    const user = await db.user.upsert({
-      where: { email: 'demo@avanzafinancial.com' },
-      update: {},
-      create: {
-        email: 'demo@avanzafinancial.com',
-        name: 'Demo User',
+    // Crear un usuario único para esta solicitud temporal
+    const guestId = randomUUID();
+    const user = await db.user.create({
+      data: {
+        email: `guest-${guestId}@temporal.com`,
+        name: 'Usuario Temporal',
       }
     });
 

@@ -41,6 +41,18 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
       }
     });
 
+    // Update the associated User if personal info is provided
+    if (validatedData.firstName || validatedData.lastName || validatedData.email) {
+      await db.user.update({
+        where: { id: application.userId },
+        data: {
+          name: `${validatedData.firstName || ''} ${validatedData.lastName || ''}`.trim() || undefined,
+          email: validatedData.email,
+          phone: validatedData.phone,
+        }
+      });
+    }
+
     return NextResponse.json({ success: true, application });
   } catch (error) {
     console.error("Error updating application:", error);
