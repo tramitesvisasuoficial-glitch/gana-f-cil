@@ -4,13 +4,13 @@ import { usePathname } from "next/navigation";
 import { Check } from "lucide-react";
 
 const steps = [
-  { id: "step-1", label: "Location", path: "/apply/step-1" },
+  { id: "step-1", label: "Ubicación", path: "/apply/step-1" },
   { id: "step-2", label: "Personal", path: "/apply/step-2" },
-  { id: "step-3", label: "Housing", path: "/apply/step-3" },
-  { id: "step-4", label: "Employment", path: "/apply/step-4" },
-  { id: "step-5", label: "Financial", path: "/apply/step-5" },
-  { id: "step-6", label: "Options", path: "/apply/step-6" },
-  { id: "review", label: "Review", path: "/apply/review" },
+  { id: "step-3", label: "Vivienda", path: "/apply/step-3" },
+  { id: "step-4", label: "Empleo", path: "/apply/step-4" },
+  { id: "step-5", label: "Préstamo", path: "/apply/step-5" },
+  { id: "step-6", label: "Identidad", path: "/apply/step-6" },
+  { id: "review", label: "Revisión", path: "/apply/review" },
 ];
 
 export function ProgressIndicator() {
