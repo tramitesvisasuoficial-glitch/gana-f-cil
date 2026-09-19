@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +14,41 @@ export default function Step1Location() {
   
   const [zipCode, setZipCode] = useState("");
   const [state, setState] = useState("");
+  const [city, setCity] = useState("");
+  const [isValidatingZip, setIsValidatingZip] = useState(false);
+  const [zipError, setZipError] = useState("");
+
+  useEffect(() => {
+    if (zipCode.length === 5) {
+      setIsValidatingZip(true);
+      setZipError("");
+      fetch(`https://api.zippopotam.us/us/${zipCode}`)
+        .then(res => {
+          if (!res.ok) throw new Error("Not found");
+          return res.json();
+        })
+        .then(data => {
+          if (data.places && data.places.length > 0) {
+            const place = data.places[0];
+            const stateAbbr = place["state abbreviation"];
+            const cityName = place["place name"];
+            setState(stateAbbr);
+            setCity(cityName);
+          }
+        })
+        .catch(err => {
+          console.error("Error fetching zip code", err);
+          setZipError("Código postal no encontrado");
+          setCity("");
+        })
+        .finally(() => {
+          setIsValidatingZip(false);
+        });
+    } else {
+      setCity("");
+      setZipError("");
+    }
+  }, [zipCode]);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,6 +58,7 @@ export default function Step1Location() {
       const response = await fetch("/api/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        // Enviar también la ciudad si queremos, aunque el schema actual solo pide zipCode y state
         body: JSON.stringify({ zipCode, state }),
       });
 
@@ -60,33 +96,32 @@ export default function Step1Location() {
             id="zipCode" 
             placeholder="ej. 90001" 
             required 
-            pattern="[0-9]{5}"
             className="h-12 text-lg"
             value={zipCode}
-            onChange={(e) => setZipCode(e.target.value)}
+            onChange={(e) => {
+              const val = e.target.value.replace(/\D/g, '').slice(0, 5);
+              setZipCode(val);
+            }}
           />
+          {isValidatingZip && <p className="text-sm text-blue-500 animate-pulse">Buscando ubicación...</p>}
+          {city && <p className="text-sm text-[#00d65f] font-bold">📍 {city}, {state}</p>}
+          {zipError && <p className="text-sm text-red-500 font-medium">{zipError}</p>}
         </div>
 
         <div className="space-y-2">
           <Label htmlFor="state" className="text-base">Estado *</Label>
-          <select 
-            id="state" 
-            required 
-            className="flex h-12 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-lg ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          <Input
+            id="state"
+            required
+            className="h-12 text-lg uppercase"
+            placeholder="ej. CA"
+            maxLength={2}
             value={state}
-            onChange={(e) => setState(e.target.value)}
-          >
-            <option value="">Selecciona un estado</option>
-            <option value="CA">California</option>
-            <option value="TX">Texas</option>
-            <option value="FL">Florida</option>
-            <option value="NY">New York</option>
-            <option value="IL">Illinois</option>
-            <option value="OTHER">Otro</option>
-          </select>
+            onChange={(e) => setState(e.target.value.toUpperCase())}
+          />
         </div>
 
-        <Button type="submit" size="lg" className="w-full h-14 text-lg mt-8 rounded-full bg-[#00d65f] text-black hover:bg-[#00d65f]/90 font-bold" disabled={isLoading}>
+        <Button type="submit" size="lg" className="w-full h-14 text-lg mt-8 rounded-full bg-[#00d65f] text-black hover:bg-[#00d65f]/90 font-bold" disabled={isLoading || isValidatingZip}>
           {isLoading ? "Cargando..." : "Continuar"}
         </Button>
       </form>
