@@ -108,21 +108,13 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4 mb-8 w-full">
             <h3 className="font-extrabold text-2xl tracking-tight">Avanza Financial</h3>
             <div className="flex flex-row items-center justify-start md:justify-end gap-x-6 flex-wrap flex-1 text-left md:text-right">
-              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Términos de uso</Link>
-              <Link href="/privacy" className="text-sm text-gray-500 hover:text-black">Privacidad</Link>
-              <Link href="/privacy" className="text-sm text-gray-500 hover:text-black max-w-[80px] leading-snug text-center">Configuración de privacidad</Link>
-              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Accesibilidad</Link>
+              <Link href="/terms" className="font-bold text-sm text-black hover:underline">Términos de uso</Link>
+              <Link href="/privacy" className="font-bold text-sm text-black hover:underline">Política de Privacidad</Link>
               <div className="w-6 h-6 border-[1.5px] border-black flex justify-center items-center shrink-0"><span className="text-base font-bold leading-none">⌂</span></div>
             </div>
           </div>
 
           <div className="text-xs text-gray-500">
-            <p className="mb-4">Ver los avisos y licencias estatales.</p>
-            <p className="mb-4 ml-4">Residentes de New Jersey: Este es un anuncio de un préstamo personal.</p>
-            <p className="mb-4 ml-4">
-              Solo en New Mexico: PARA DENUNCIAR UN PROBLEMA O UNA QUEJA CON ESTE PRESTAMISTA, PUEDE ESCRIBIR O LLAMAR A: Customer Experience - Contact Manager, Oportun, PO Box 560910, The Colony, TX 75056; 888-408-3020; Complaints@oportun.com. Este prestamista está autorizado y regulado por el Departamento de Regulación y Licencias de New Mexico, División de Instituciones Financieras, PO Box 25101, 2550 Cerrillos Road, Santa Fe, New Mexico 87504. Para reportar cualquier problema o queja no resueltos, comuníquese con la división al 505-476-4885 o visite el sitio web ↗.
-            </p>
-            <p className="mb-6 ml-4 font-bold">NMLS #1571904. Ver la base de datos de acceso al consumidor de NMLS ↗.</p>
             
             <p className="mb-8 flex items-start gap-1">
               <span className="mt-0.5">↗</span>
