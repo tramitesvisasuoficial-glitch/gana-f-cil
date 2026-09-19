@@ -52,7 +52,6 @@ export function Footer() {
               <li className="pt-2"><span className="font-bold text-black block truncate">Préstamos</span></li>
               <li><span className="hover:text-black block truncate">(555) 123-4567</span></li>
               <li><Link href="mailto:hola@avanzafinancial.com" className="hover:text-black block truncate">hola@Avanza...com</Link></li>
-              <li><Link href="/admin" className="hover:text-black block truncate">Iniciar sesión</Link></li>
             </ul>
           </div>
 
