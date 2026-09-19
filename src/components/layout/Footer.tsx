@@ -73,11 +73,12 @@ export function Footer() {
             </div>
             
             <div className="flex gap-2 mb-6">
-              {/* Fake Social Icons */}
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">f</div>
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">Y</div>
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">t</div>
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">in</div>
+              {/* Social Icons */}
+              <a href="https://www.facebook.com/profile.php?id=61579689713237" target="_blank" rel="noopener noreferrer" className="w-6 h-6 bg-[#1877F2] hover:bg-blue-700 rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0 transition-colors">
+                f
+              </a>
+              <div className="w-6 h-6 bg-black rounded-full flex justify-center items-center text-white text-xs font-bold shrink-0">𝕏</div>
+              <div className="w-6 h-6 bg-black rounded-full flex justify-center items-center text-white text-xs font-bold shrink-0">in</div>
             </div>
 
             <h3 className="font-extrabold text-base mb-2 leading-snug">Obtén la aplicación de Avanza Financial</h3>
