@@ -27,7 +27,7 @@ export function Navbar() {
           </Link>
 
           {/* Navigation */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="hidden md:flex items-center gap-3 shrink-0">
             <div className="group relative cursor-pointer py-4">
               <span className="text-xs font-bold text-black flex items-center gap-0.5 whitespace-nowrap">
                 Préstamos
@@ -60,12 +60,12 @@ export function Navbar() {
 
         {/* Right Section */}
         <div className="flex items-center gap-2 shrink-0 pl-2">
-          <Link href="/login" className="text-xs font-bold text-black flex items-center gap-0.5 hover:underline whitespace-nowrap">
+          <Link href="/login" className="hidden md:flex text-xs font-bold text-black items-center gap-0.5 hover:underline whitespace-nowrap">
             Iniciar sesión
             <svg width="5" height="5" viewBox="0 0 12 12" fill="none" className="mt-0.5"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </Link>
-          <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-3 py-1 rounded-[10px] text-xs h-6 whitespace-nowrap ml-2">
-            <Link href="/apply">Aplicar ahora</Link>
+          <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-3 py-1 rounded-[10px] text-xs h-6 whitespace-nowrap md:ml-2">
+            <Link href="/apply">Aplicar</Link>
           </Button>
         </div>
       </div>
