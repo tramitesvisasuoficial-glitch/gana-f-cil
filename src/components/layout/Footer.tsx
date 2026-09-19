@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-[#fcfaf9] text-black">
       <div className="container mx-auto px-4 py-12 max-w-7xl">
-        <div className="flex flex-row justify-between gap-2 w-full">
+        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-2 w-full">
           
           {/* Column 1 */}
           <div className="flex-1 min-w-0">
@@ -107,9 +107,9 @@ export function Footer() {
 
         <div className="mt-16 pt-8 flex flex-col border-t border-gray-200">
           {/* Bottom links */}
-          <div className="flex flex-row items-center justify-between gap-4 mb-8 w-full">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4 mb-8 w-full">
             <h3 className="font-extrabold text-2xl tracking-tight">Avanza Financial</h3>
-            <div className="flex flex-row items-center justify-end gap-x-6 flex-wrap flex-1 text-right">
+            <div className="flex flex-row items-center justify-start md:justify-end gap-x-6 flex-wrap flex-1 text-left md:text-right">
               <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Condiciones de uso</Link>
               <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Privacidad</Link>
               <Link href="/terms" className="text-sm text-gray-500 hover:text-black max-w-[80px] leading-snug text-center">Configuración de privacidad</Link>
