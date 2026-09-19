@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  name          String
+  phone         String?
+  address       String?
+  language      String    @default("en")
+  isAdmin       Boolean    @default(false)
+  applications  Application[]
+  createdAt     DateTime  @default(now())
+}
+
+model Application {
+  id               String   @id @default(uuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // Paso 1 — Ubicación
+  zipCode          String?
+  state            String?
+  // Paso 2 — Datos personales
+  firstName        String?
+  lastName         String?
+  dateOfBirth      DateTime?
+  email            String?
+  phone            String?
+  // Paso 3 — Vivienda
+  address          String?
+  housingStatus    String?
+  housingCost      Decimal?
+  // Paso 4 — Empleo
+  employmentStatus String?
+  employer         String?
+  monthlyIncome    Decimal?
+  incomeFrequency  String?
+  // Paso 5 — Financiero
+  requestedAmount  Decimal?
+  termMonths       Int?
+  loanPurpose      String?
+  bankStatus       String?
+  creditProfile    String?
+  // Paso 6 — Inmigración
+  residencyStatus  String?
+  idType           String? // SSN / ITIN / Other
+  // Resultado DEMO
+  status           String   @default("draft") // reviewing | offer_ready | approved | review_required | unavailable
+  demoApr          Decimal?
+  demoMonthlyPayment Decimal?
+  demoOfferAmount  Decimal?
+  demoTerm         Int?
+  notes            String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}

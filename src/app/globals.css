@@ -1,26 +1,99 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  
+  /* Avanza Oportun Clone Palette */
+  --color-avanza-primary: #000000;
+  --color-avanza-accent: #00c853;
+  --color-avanza-success: #00c853;
+  --color-avanza-warning: #FF7D00;
+  --color-avanza-error: #F53F3F;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #FFFFFF;
+  --foreground: #000000;
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+  --popover: #FFFFFF;
+  --popover-foreground: #000000;
+  
+  --primary: #000000;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F7F8FA;
+  --secondary-foreground: #4E5969;
+  --muted: #F7F8FA;
+  --muted-foreground: #86909C;
+  --accent: #eef8f2;
+  --accent-foreground: #00c853;
+  
+  --destructive: #FF7D00;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E6EB;
+  --input: #E5E6EB;
+  --ring: #000000;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #1D2129;
+  --foreground: #F7F8FA;
+  --card: #272E3B;
+  --card-foreground: #F7F8FA;
+  --popover: #272E3B;
+  --popover-foreground: #F7F8FA;
+  
+  --primary: #FFFFFF;
+  --primary-foreground: #000000;
+  --secondary: #4E5969;
+  --secondary-foreground: #F7F8FA;
+  --muted: #4E5969;
+  --muted-foreground: #86909C;
+  --accent: #00c853;
+  --accent-foreground: #F7F8FA;
+  
+  --destructive: #FF7D00;
+  --destructive-foreground: #FFFFFF;
+  --border: #4E5969;
+  --input: #4E5969;
+  --ring: #FFFFFF;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
 }

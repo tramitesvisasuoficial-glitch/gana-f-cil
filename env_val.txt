@@ -1,0 +1,1 @@
+postgresql://postgres.ngbshpjfksgzjwowsbor:avanza20268925@aws-0-us-east-2.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1
