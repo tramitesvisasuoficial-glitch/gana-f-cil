@@ -9,8 +9,8 @@ export function Footer() {
           
           {/* Column 1 */}
           <div className="flex-1 min-w-0">
-            <h3 className="font-extrabold text-[10px] mb-4 truncate">Avanza Financial</h3>
-            <ul className="space-y-3 text-[8px] text-gray-600 font-medium">
+            <h3 className="font-extrabold text-base mb-4 truncate">Avanza Financial</h3>
+            <ul className="space-y-3 text-sm text-gray-600 font-medium">
               <li><Link href="/" className="hover:text-black block truncate">Acerca</Link></li>
               <li><Link href="/" className="hover:text-black block truncate">Equipo</Link></li>
               <li><Link href="/" className="hover:text-black block truncate">Carreras</Link></li>
@@ -22,8 +22,8 @@ export function Footer() {
 
           {/* Column 2 */}
           <div className="flex-1 min-w-0">
-            <h3 className="font-extrabold text-[10px] mb-4 truncate">Ayuda</h3>
-            <ul className="space-y-3 text-[8px] text-gray-600 font-medium">
+            <h3 className="font-extrabold text-base mb-4 truncate">Ayuda</h3>
+            <ul className="space-y-3 text-sm text-gray-600 font-medium">
               <li><Link href="/support" className="hover:text-black block truncate">Ayuda de la app</Link></li>
               <li><Link href="/support" className="hover:text-black block truncate text-[#00d65f] font-bold">Quejas y Reclamos</Link></li>
               <li><Link href="/support" className="hover:text-black block truncate">Contáctanos</Link></li>
@@ -35,8 +35,8 @@ export function Footer() {
 
           {/* Column 3 */}
           <div className="flex-1 min-w-0">
-            <h3 className="font-extrabold text-[10px] mb-4 truncate">Productos</h3>
-            <ul className="space-y-3 text-[8px] text-gray-600 font-medium">
+            <h3 className="font-extrabold text-base mb-4 truncate">Productos</h3>
+            <ul className="space-y-3 text-sm text-gray-600 font-medium">
               <li><Link href="/" className="hover:text-black block truncate">Hacer un pago</Link></li>
               <li><Link href="/loans" className="hover:text-black block leading-snug">Préstamos personales</Link></li>
               <li><Link href="/savings" className="hover:text-black block truncate">Ahorros: Set & Save</Link></li>
@@ -45,8 +45,8 @@ export function Footer() {
 
           {/* Column 4 */}
           <div className="flex-[1.2] min-w-0">
-            <h3 className="font-extrabold text-[10px] mb-4 truncate">Contáctanos</h3>
-            <ul className="space-y-3 text-[8px] text-gray-600 font-medium">
+            <h3 className="font-extrabold text-base mb-4 truncate">Contáctanos</h3>
+            <ul className="space-y-3 text-sm text-gray-600 font-medium">
               <li><span className="font-bold text-black block truncate">Préstamos</span></li>
               <li><span className="hover:text-black block truncate">(555) 123-4567</span></li>
               <li><Link href="mailto:hola@avanzafinancial.com" className="hover:text-black block truncate">hola@Avanza...com</Link></li>
@@ -59,46 +59,46 @@ export function Footer() {
 
           {/* Column 5 */}
           <div className="flex-[1.8] min-w-0">
-            <h3 className="font-extrabold text-[10px] mb-2 truncate">Mantente informado</h3>
-            <p className="text-[8px] text-black leading-snug mb-3">
+            <h3 className="font-extrabold text-base mb-2 truncate">Mantente informado</h3>
+            <p className="text-sm text-black leading-snug mb-3">
               Inscríbete para recibir información actualizada.
             </p>
             <div className="flex flex-row gap-1 mb-6">
               <input 
                 type="email" 
                 placeholder="Your email" 
-                className="w-full h-8 border border-gray-400 rounded-[20px] px-2 text-[8px] focus:outline-none focus:border-black min-w-0"
+                className="w-full h-8 border border-gray-400 rounded-[20px] px-2 text-sm focus:outline-none focus:border-black min-w-0"
               />
-              <Button className="bg-black text-white hover:bg-black/90 font-bold h-8 rounded-[20px] text-[8px] px-3 shrink-0">
+              <Button className="bg-black text-white hover:bg-black/90 font-bold h-8 rounded-[20px] text-sm px-3 shrink-0">
                 Inscríbete
               </Button>
             </div>
             
             <div className="flex gap-2 mb-6">
               {/* Fake Social Icons */}
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-[8px] font-bold shrink-0">f</div>
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-[8px] font-bold shrink-0">Y</div>
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-[8px] font-bold shrink-0">t</div>
-              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-[8px] font-bold shrink-0">in</div>
+              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">f</div>
+              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">Y</div>
+              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">t</div>
+              <div className="w-4 h-4 bg-black rounded-full flex justify-center items-center text-white text-sm font-bold shrink-0">in</div>
             </div>
 
-            <h3 className="font-extrabold text-[10px] mb-2 leading-snug">Obtén la aplicación de Avanza Financial</h3>
-            <p className="text-[8px] text-black leading-snug mb-3">
+            <h3 className="font-extrabold text-base mb-2 leading-snug">Obtén la aplicación de Avanza Financial</h3>
+            <p className="text-sm text-black leading-snug mb-3">
               Todas tus necesidades financieras en la palma de tu mano ↗
             </p>
             <div className="flex gap-1 flex-col sm:flex-row">
               <div className="bg-black text-white rounded-md px-1.5 py-1 flex items-center gap-1 cursor-pointer max-w-[90px]">
-                 <span className="text-[12px]"></span>
+                 <span className="text-lg"></span>
                  <div className="flex flex-col">
-                   <span className="text-[4px] leading-none">Consíguelo en el</span>
-                   <span className="text-[7px] font-bold leading-none">App Store</span>
+                   <span className="text-xs leading-none">Consíguelo en el</span>
+                   <span className="text-xs font-bold leading-none">App Store</span>
                  </div>
               </div>
               <div className="bg-black text-white rounded-md px-1.5 py-1 flex items-center gap-1 cursor-pointer max-w-[90px]">
-                 <span className="text-[10px]">▶</span>
+                 <span className="text-base">▶</span>
                  <div className="flex flex-col">
-                   <span className="text-[4px] leading-none">DISPONIBLE EN</span>
-                   <span className="text-[7px] font-bold leading-none">Google Play</span>
+                   <span className="text-xs leading-none">DISPONIBLE EN</span>
+                   <span className="text-xs font-bold leading-none">Google Play</span>
                  </div>
               </div>
             </div>
@@ -108,17 +108,17 @@ export function Footer() {
         <div className="mt-16 pt-8 flex flex-col border-t border-gray-200">
           {/* Bottom links */}
           <div className="flex flex-row items-center justify-between gap-4 mb-8 w-full">
-            <h3 className="font-extrabold text-[16px] tracking-tight">Avanza Financial</h3>
+            <h3 className="font-extrabold text-2xl tracking-tight">Avanza Financial</h3>
             <div className="flex flex-row items-center justify-end gap-x-6 flex-wrap flex-1 text-right">
-              <Link href="/terms" className="text-[8px] text-gray-500 hover:text-black">Condiciones de uso</Link>
-              <Link href="/terms" className="text-[8px] text-gray-500 hover:text-black">Privacidad</Link>
-              <Link href="/terms" className="text-[8px] text-gray-500 hover:text-black max-w-[80px] leading-snug text-center">Configuración de privacidad</Link>
-              <Link href="/terms" className="text-[8px] text-gray-500 hover:text-black">Accesibilidad</Link>
-              <div className="w-6 h-6 border-[1.5px] border-black flex justify-center items-center shrink-0"><span className="text-[10px] font-bold leading-none">⌂</span></div>
+              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Condiciones de uso</Link>
+              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Privacidad</Link>
+              <Link href="/terms" className="text-sm text-gray-500 hover:text-black max-w-[80px] leading-snug text-center">Configuración de privacidad</Link>
+              <Link href="/terms" className="text-sm text-gray-500 hover:text-black">Accesibilidad</Link>
+              <div className="w-6 h-6 border-[1.5px] border-black flex justify-center items-center shrink-0"><span className="text-base font-bold leading-none">⌂</span></div>
             </div>
           </div>
 
-          <div className="text-[7px] text-gray-500">
+          <div className="text-xs text-gray-500">
             <p className="mb-4">Ver los avisos y licencias estatales.</p>
             <p className="mb-4 ml-4">Residentes de New Jersey: Este es un anuncio de un préstamo personal.</p>
             <p className="mb-4 ml-4">
@@ -144,13 +144,13 @@ export function Footer() {
             </p>
           </div>
           
-          <div className="rounded-lg bg-gray-50 p-4 text-[7px] text-gray-500 border border-gray-100 mt-4">
-            <p className="font-bold text-black mb-1 text-[8px]">Demo Disclosure:</p>
+          <div className="rounded-lg bg-gray-50 p-4 text-xs text-gray-500 border border-gray-100 mt-4">
+            <p className="font-bold text-black mb-1 text-sm">Demo Disclosure:</p>
             <p className="leading-tight">
               Este sitio web es un prototipo con fines de demostración. No es un banco, prestamista ni corredor de préstamos y no otorga préstamos reales.
             </p>
           </div>
-          <p className="mt-4 text-[7px] text-gray-400">
+          <p className="mt-4 text-xs text-gray-400">
             &copy; {new Date().getFullYear()} Avanza Financial Demo. Todos los derechos reservados.
           </p>
         </div>

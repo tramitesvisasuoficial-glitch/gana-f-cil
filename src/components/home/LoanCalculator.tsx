@@ -18,7 +18,7 @@ export function LoanCalculator() {
 
   return (
     <div className="border border-gray-300 rounded-[12px] p-6 w-full flex flex-col gap-4 shadow-sm bg-white">
-      <h2 className="text-[14px] font-extrabold text-black">
+      <h2 className="text-xl font-extrabold text-black">
         Calculadora de préstamo
       </h2>
       
@@ -27,12 +27,12 @@ export function LoanCalculator() {
         {/* Left Side: Location & Slider */}
         <div className="w-full md:w-1/2 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-[8px] font-bold text-black">¿Cómo serían los pagos de tu préstamo?</label>
+            <label className="text-sm font-bold text-black">¿Cómo serían los pagos de tu préstamo?</label>
             <div className="relative">
               <select 
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="w-full appearance-none border border-gray-200 rounded-[6px] py-2 pl-2 pr-6 text-[8px] text-black bg-white focus:outline-none focus:border-[#00d65f] focus:ring-1 focus:ring-[#00d65f] transition-colors cursor-pointer"
+                className="w-full appearance-none border border-gray-200 rounded-[6px] py-2 pl-2 pr-6 text-sm text-black bg-white focus:outline-none focus:border-[#00d65f] focus:ring-1 focus:ring-[#00d65f] transition-colors cursor-pointer"
               >
                 <option value="">¿Dónde vives?</option>
                 <option value="CA">California</option>
@@ -51,8 +51,8 @@ export function LoanCalculator() {
           {location && (
             <div className="flex flex-col gap-2 animate-in fade-in slide-in-from-top-2 duration-300">
               <div className="flex justify-between items-end">
-                <label className="text-[8px] font-bold text-black">Monto deseado</label>
-                <span className="text-[10px] font-extrabold text-[#00d65f]">${amount.toLocaleString()}</span>
+                <label className="text-sm font-bold text-black">Monto deseado</label>
+                <span className="text-base font-extrabold text-[#00d65f]">${amount.toLocaleString()}</span>
               </div>
               <input 
                 type="range" 
@@ -63,7 +63,7 @@ export function LoanCalculator() {
                 onChange={(e) => setAmount(Number(e.target.value))}
                 className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#00d65f]"
               />
-              <div className="flex justify-between text-[7px] text-gray-400">
+              <div className="flex justify-between text-xs text-gray-400">
                 <span>$300</span>
                 <span>$10,000</span>
               </div>
@@ -75,25 +75,25 @@ export function LoanCalculator() {
         <div className="w-full md:w-1/2 flex flex-col gap-3 justify-center border-t md:border-t-0 md:border-l border-gray-100 pt-4 md:pt-0 md:pl-6">
           {!location ? (
             <div className="flex flex-col gap-1">
-              <label className="text-[8px] text-gray-500">Monto del préstamo</label>
+              <label className="text-sm text-gray-500">Monto del préstamo</label>
               <div className="border-b border-black pb-1">
-                <span className="text-[24px] font-extrabold text-gray-300 tracking-tight">$10,000</span>
+                <span className="text-5xl font-extrabold text-gray-300 tracking-tight">$10,000</span>
               </div>
-              <p className="text-[7px] text-gray-400 mt-2">Selecciona tu estado para ver las opciones disponibles.</p>
+              <p className="text-xs text-gray-400 mt-2">Selecciona tu estado para ver las opciones disponibles.</p>
             </div>
           ) : (
             <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-2 duration-300">
               <div className="flex flex-col gap-1">
-                <label className="text-[8px] text-gray-500">Pago quincenal estimado</label>
+                <label className="text-sm text-gray-500">Pago quincenal estimado</label>
                 <div className="border-b border-[#00d65f] pb-1 flex items-end gap-1">
-                  <span className="text-[24px] font-extrabold text-black tracking-tight">${calculatePayment(amount)}</span>
+                  <span className="text-5xl font-extrabold text-black tracking-tight">${calculatePayment(amount)}</span>
                 </div>
               </div>
               <div className="flex items-center justify-between gap-4">
-                <p className="text-[6.5px] text-gray-500 leading-tight w-2/3">
+                <p className="text-xs text-gray-500 leading-tight w-2/3">
                   *Cálculo referencial basado en término de 24 meses. El pago real y APR variará según historial de crédito.
                 </p>
-                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-4 py-1.5 rounded-[20px] text-[8px] shrink-0">
+                <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-4 py-1.5 rounded-[20px] text-sm shrink-0">
                   <Link href="/apply">Aplicar ahora</Link>
                 </Button>
               </div>

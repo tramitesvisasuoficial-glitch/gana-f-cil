@@ -52,7 +52,7 @@ export default function ReviewsPage() {
             <Star className="fill-current w-8 h-8" />
             <Star className="fill-current w-8 h-8" />
           </div>
-          <p className="font-bold mt-2 text-[14px]">Calificación Excelente (4.9/5)</p>
+          <p className="font-bold mt-2 text-xl">Calificación Excelente (4.9/5)</p>
         </div>
       </section>
 
@@ -68,7 +68,7 @@ export default function ReviewsPage() {
                 <Star className="fill-current w-5 h-5" />
                 <Star className="fill-current w-5 h-5" />
               </div>
-              <p className="text-gray-800 font-medium italic mb-6 text-[15px] flex-1">
+              <p className="text-gray-800 font-medium italic mb-6 text-xl flex-1">
                 "{review.text}"
               </p>
               <div className="flex justify-between items-end border-t border-gray-100 pt-4">
