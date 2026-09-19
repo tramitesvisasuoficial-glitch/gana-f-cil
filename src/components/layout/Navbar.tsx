@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [lang, setLang] = useState("English");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     setLang(lang === "English" ? "Español" : "English");
@@ -67,8 +68,49 @@ export function Navbar() {
           <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-3 py-1 rounded-[10px] text-xs h-6 whitespace-nowrap md:ml-2">
             <Link href="/apply">Aplicar</Link>
           </Button>
+          
+          {/* Hamburger Menu Button (Mobile) */}
+          <button 
+            className="md:hidden ml-1 p-1 text-black flex items-center justify-center"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Abrir menú"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-lg flex flex-col z-50">
+          <div className="flex flex-col py-4 px-4 gap-4">
+            <div className="flex flex-col gap-2">
+              <span className="text-sm font-black text-gray-400 uppercase tracking-widest">Préstamos</span>
+              <Link href="/apply" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Préstamos Personales</Link>
+              <Link href="/apply" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Préstamos con Garantía</Link>
+            </div>
+            
+            <div className="h-px bg-gray-100 w-full"></div>
+            
+            <div className="flex flex-col gap-2">
+              <span className="text-sm font-black text-gray-400 uppercase tracking-widest">Ahorros</span>
+              <Link href="/savings" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Conocer Plan Set & Save</Link>
+              <Link href="/apply-savings" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Abrir cuenta de ahorros</Link>
+            </div>
+
+            <div className="h-px bg-gray-100 w-full"></div>
+            
+            <Link href="/locations" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-2">
+              Sucursales
+            </Link>
+            
+            <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-2 flex items-center justify-between">
+              Iniciar sesión
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="-rotate-90"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
