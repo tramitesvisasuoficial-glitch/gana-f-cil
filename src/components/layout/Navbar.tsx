@@ -85,7 +85,7 @@ export function Navbar() {
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-lg flex flex-col z-50">
           <div className="flex flex-col py-4 px-4 gap-4">
             <div className="flex flex-col gap-2">
-              <span className="text-sm font-black text-gray-400 uppercase tracking-widest">Préstamos</span>
+              <span className="text-sm font-black text-black uppercase tracking-widest">Préstamos</span>
               <Link href="/apply" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Préstamos Personales</Link>
               <Link href="/apply" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Préstamos con Garantía</Link>
             </div>
@@ -93,7 +93,7 @@ export function Navbar() {
             <div className="h-px bg-gray-100 w-full"></div>
             
             <div className="flex flex-col gap-2">
-              <span className="text-sm font-black text-gray-400 uppercase tracking-widest">Ahorros</span>
+              <span className="text-sm font-black text-black uppercase tracking-widest">Ahorros</span>
               <Link href="/savings" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Conocer Plan Set & Save</Link>
               <Link href="/apply-savings" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-1">Abrir cuenta de ahorros</Link>
             </div>
