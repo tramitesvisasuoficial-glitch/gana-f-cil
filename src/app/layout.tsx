@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MapPin, MessageCircle } from "lucide-react";
@@ -29,7 +30,8 @@ export default function RootLayout({
         
         {/* Floating Action Buttons */}
         <div className="fixed bottom-6 right-4 md:right-6 flex flex-col gap-3 z-50">
-          <button 
+          <Link 
+            href="/locations"
             className="w-[52px] h-[52px] bg-white border border-gray-200 shadow-[0_4px_12px_rgb(0,0,0,0.08)] rounded-full flex items-center justify-center text-[#00c853] hover:scale-105 transition-all group relative"
             aria-label="Sucursales"
           >
@@ -37,7 +39,7 @@ export default function RootLayout({
             <span className="absolute right-full mr-3 bg-black text-white text-lg font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
               Sucursales
             </span>
-          </button>
+          </Link>
           
           <a 
             href="https://wa.me/19295909116"
