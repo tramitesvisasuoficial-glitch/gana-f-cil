@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Globe, Menu, X } from "lucide-react";
+import { Globe, Menu, X, TrendingUp } from "lucide-react";
 
 export function Navbar() {
   const [lang, setLang] = useState("English");
@@ -18,11 +18,9 @@ export function Navbar() {
       <div className="container mx-auto flex h-[60px] items-center justify-between px-2 w-full">
         {/* Left Section: Logo & Nav items */}
         <div className="flex items-center gap-2 shrink-0">
-          <Link href="/" className="flex items-center gap-0.5 shrink-0 mr-2">
-            <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full border-[1.5px] border-black shrink-0">
-              <div className="h-[3px] w-[3px] rounded-full bg-black shrink-0" />
-            </div>
-            <span className="text-base font-bold tracking-tight text-black mt-0.5 shrink-0">
+          <Link href="/" className="flex items-center gap-1.5 shrink-0 mr-2">
+            <TrendingUp className="w-6 h-6 text-[#00d65f]" strokeWidth={2.5} />
+            <span className="text-xl font-extrabold tracking-tight text-[#00d65f] mt-0.5 shrink-0">
               Avanza Financial
             </span>
           </Link>
