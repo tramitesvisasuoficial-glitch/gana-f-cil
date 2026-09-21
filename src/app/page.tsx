@@ -322,8 +322,18 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="w-full md:w-1/2 bg-[#ffe7e5] rounded-[24px] p-8 flex justify-center items-center shadow-sm order-1 md:order-2">
-             <img src="/images/app_graphic.jpg" alt="App Set and Save" className="w-full max-w-[280px] mix-blend-multiply opacity-90" />
+          <div className="w-full md:w-1/2 bg-[#ffe7e5] rounded-[24px] p-6 flex justify-center items-center shadow-sm order-1 md:order-2">
+            <div className="relative rounded-[20px] overflow-hidden shadow-[0_12px_40px_rgb(0,0,0,0.18)] max-w-[220px] w-full aspect-[9/16] bg-black border-[4px] border-black">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[36px] h-[8px] bg-black rounded-b-[6px] z-20"></div>
+              <video
+                src="/avanza.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover relative z-10"
+              />
+            </div>
           </div>
         </div>
       </section>
