@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useApplicationStore } from "@/store/useApplicationStore";
+import { trackLead } from "@/components/shared/MetaPixel";
 
 export default function ReviewApplication() {
   const router = useRouter();
@@ -36,6 +37,7 @@ export default function ReviewApplication() {
       const data = await response.json();
       
       if (data.success) {
+        trackLead(); // Meta Pixel: Lead — envío real de formulario exitoso
         router.push("/apply/processing");
       } else {
         alert("Error al enviar la solicitud");

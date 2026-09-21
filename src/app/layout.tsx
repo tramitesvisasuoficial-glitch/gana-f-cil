@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MapPin, MessageCircle } from "lucide-react";
+import { MetaPixel } from "@/components/shared/MetaPixel";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -60,6 +61,9 @@ export default function RootLayout({
             </span>
           </a>
         </div>
+
+        {/* Meta Pixel */}
+        <MetaPixel />
       </body>
     </html>
   );
