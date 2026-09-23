@@ -478,22 +478,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bankrate Section */}
+      {/* VeraTransfers Section */}
       <section className="bg-[#fcfaf9] py-12 md:py-16 w-full border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6">
           <div className="relative">
             {/* Badge Graphic */}
-            <div className="bg-black text-white px-5 py-5 rounded-t-none rounded-b-[20px] flex flex-col items-center justify-center relative clip-badge w-[80px]">
+            <div className="bg-[#00d65f] text-black px-5 py-5 rounded-t-none rounded-b-[20px] flex flex-col items-center justify-center relative clip-badge w-[80px] shadow-sm">
               <div className="flex gap-1 mb-1 absolute -top-3">
-                <span className="text-black text-lg">★</span>
-                <span className="text-black text-xl">★</span>
-                <span className="text-black text-lg">★</span>
+                <span className="text-[#00d65f] text-lg drop-shadow-md">★</span>
+                <span className="text-[#00d65f] text-xl drop-shadow-md">★</span>
+                <span className="text-[#00d65f] text-lg drop-shadow-md">★</span>
               </div>
               <span className="text-xl font-black leading-none mt-3">#1</span>
-              <span className="text-xs font-bold leading-tight text-center mt-1">savings<br/>app</span>
+              <span className="text-xs font-bold leading-tight text-center mt-1">billetera<br/>virtual</span>
               {/* Decorative ribbon tails */}
-              <div className="absolute top-2 -left-3 w-3 h-5 bg-black clip-ribbon-left"></div>
-              <div className="absolute top-2 -right-3 w-3 h-5 bg-black clip-ribbon-right"></div>
+              <div className="absolute top-2 -left-3 w-3 h-5 bg-[#00d65f] clip-ribbon-left"></div>
+              <div className="absolute top-2 -right-3 w-3 h-5 bg-[#00d65f] clip-ribbon-right"></div>
             </div>
             {/* Custom CSS for badge clips */}
             <style jsx>{`
@@ -510,11 +510,19 @@ export default function Home() {
           </div>
           
           <div className="text-center md:text-left flex flex-col items-center md:items-baseline gap-2">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-black tracking-tight">
-              La app #1 en ahorros de 2025 según 
+            <h2 className="text-2xl md:text-3xl font-extrabold text-black tracking-tight mb-2">
+              La billetera virtual más descargada
             </h2>
-            <div className="flex items-center text-gray-500 font-bold text-5xl tracking-tight">
-              Bankrate<span className="text-sm mb-4 ml-0.5 border border-gray-400 rounded-sm px-[1px] leading-none">↗</span>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+              <img src="/images/veratransfers_logo.jpg" alt="VeraTransfers Logo" className="w-24 h-24 rounded-[20px] shadow-md border border-gray-100 shrink-0 object-cover" />
+              <div className="flex flex-col text-center md:text-left">
+                <div className="text-[#00d65f] font-black text-4xl md:text-6xl tracking-tight leading-none">
+                  VeraTransfers
+                </div>
+                <p className="text-gray-600 font-medium text-base md:text-lg mt-3 max-w-md leading-snug">
+                  La plataforma oficial y segura de Avanza Financial. Recibe tus desembolsos de inmediato y administra tu dinero desde tu celular.
+                </p>
+              </div>
             </div>
           </div>
         </div>

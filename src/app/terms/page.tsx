@@ -34,7 +34,7 @@ export default function TermsPage() {
               </div>
               <div>
                 <h3 className="font-bold text-black">¿Qué documentación necesito para solicitar un préstamo?</h3>
-                <p>Normalmente solo requerimos una identificación oficial vigente, comprobante de ingresos y comprobante de domicilio.</p>
+                <p>Normalmente solo requerimos una identificación oficial vigente, comprobante de ingresos y comprobante de domicilio. <strong>Aceptamos a inmigrantes con ITIN, Pasaporte de su país de origen o Matrícula Consular.</strong> ¡No es obligatorio tener SSN!</p>
               </div>
             </div>
           </section>

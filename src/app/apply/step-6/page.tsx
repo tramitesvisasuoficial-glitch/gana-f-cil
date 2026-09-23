@@ -101,10 +101,12 @@ export default function Step6Immigration() {
               <option value="">Selecciona el tipo de ID</option>
               <option value="ssn">SSN</option>
               <option value="itin">ITIN</option>
-              <option value="other">Otro</option>
+              <option value="passport">Pasaporte de tu país</option>
+              <option value="consular">Matrícula Consular</option>
+              <option value="other">Otro documento oficial</option>
             </select>
-            <p className="text-sm text-muted-foreground mt-2">
-              ¡Aceptamos ITINs! No necesitas un SSN para aplicar.
+            <p className="text-sm font-medium text-[#00d65f] mt-2 bg-green-50 p-2 rounded-md border border-green-100">
+              ¡Aceptamos ITIN, Pasaporte y Matrícula Consular! No necesitas un SSN para aplicar.
             </p>
           </div>
         </div>
