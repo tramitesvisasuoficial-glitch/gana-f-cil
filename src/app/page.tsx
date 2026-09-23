@@ -524,6 +524,14 @@ export default function Home() {
                 <p className="text-gray-600 font-medium text-base md:text-lg mt-3 max-w-md leading-snug">
                   La plataforma oficial y segura de Avanza Financial. Recibe tus desembolsos de inmediato y administra tu dinero desde tu celular.
                 </p>
+                <div className="mt-5">
+                  <Button asChild className="bg-[#00d65f] text-black hover:bg-[#00d65f]/90 font-bold px-8 py-6 md:py-3 rounded-[30px] text-base w-full md:w-auto shadow-md flex items-center justify-center gap-2">
+                    <a href="https://veratransfers.vercel.app" target="_blank" rel="noopener noreferrer">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      Es totalmente gratis, descárgala aquí
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
