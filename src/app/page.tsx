@@ -514,11 +514,13 @@ export default function Home() {
               La billetera virtual más descargada
             </h2>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <img src="/images/veratransfers_logo.jpg" alt="VeraTransfers Logo" className="w-24 h-24 rounded-[20px] shadow-md border border-gray-100 shrink-0 object-cover" />
+              <a href="https://veratransfers.vercel.app" target="_blank" rel="noopener noreferrer" className="shrink-0 hover:opacity-90 transition-opacity">
+                <img src="/images/veratransfers_logo.jpg" alt="VeraTransfers Logo" className="w-24 h-24 rounded-[20px] shadow-md border border-gray-100 object-cover" />
+              </a>
               <div className="flex flex-col text-center md:text-left">
-                <div className="text-[#00d65f] font-black text-4xl md:text-6xl tracking-tight leading-none">
+                <a href="https://veratransfers.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#00d65f] font-black text-4xl md:text-6xl tracking-tight leading-none hover:underline decoration-4 underline-offset-4">
                   VeraTransfers
-                </div>
+                </a>
                 <p className="text-gray-600 font-medium text-base md:text-lg mt-3 max-w-md leading-snug">
                   La plataforma oficial y segura de Avanza Financial. Recibe tus desembolsos de inmediato y administra tu dinero desde tu celular.
                 </p>
