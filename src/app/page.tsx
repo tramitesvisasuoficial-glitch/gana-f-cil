@@ -38,7 +38,7 @@ export default function Home() {
                   </Button>
                   <Button asChild className="bg-[#25D366] text-white hover:bg-[#1DA851] font-bold px-6 py-6 md:py-3 rounded-[30px] text-base w-full md:w-auto text-center flex items-center justify-center gap-2">
                     <Link
-                      href="https://wa.me/1234567890"
+                      href="https://wa.me/19295909116"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -287,7 +287,7 @@ export default function Home() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" className="mb-1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span className="text-base md:text-sm font-bold text-black mb-3">Por WhatsApp</span>
               <Button asChild className="bg-black text-white hover:bg-black/90 font-bold px-8 md:px-6 py-6 md:py-2 rounded-[30px] md:rounded-[20px] text-base md:text-sm w-full md:w-auto min-w-[200px]">
-                <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                <Link href="https://wa.me/19295909116" target="_blank" rel="noopener noreferrer">
                   Contactar Asesor
                 </Link>
               </Button>
