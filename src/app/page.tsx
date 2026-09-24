@@ -346,9 +346,7 @@ export default function Home() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[36px] h-[8px] bg-black rounded-b-[6px] z-20"></div>
               <video
                 src="/avanza.mp4"
-                autoPlay
-                loop
-                muted
+                controls
                 playsInline
                 className="w-full h-full object-cover relative z-10"
               />
