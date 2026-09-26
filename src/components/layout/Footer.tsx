@@ -47,11 +47,11 @@ export function Footer() {
           <div className="flex-[1.2] min-w-0">
             <h3 className="font-extrabold text-base mb-4 truncate">Contáctanos</h3>
             <ul className="space-y-3 text-sm text-gray-600 font-medium">
-              <li><span className="font-bold text-black block truncate">Avanza Financial</span></li>
-              <li><span className="hover:text-black block leading-snug">Suite 200, 123 Business Blvd<br/>Miami, FL 33131</span></li>
-              <li className="pt-2"><span className="font-bold text-black block truncate">Préstamos</span></li>
-              <li><span className="hover:text-black block truncate">(555) 123-4567</span></li>
-              <li><Link href="mailto:hola@avanzafinancial.com" className="hover:text-black block truncate">hola@Avanza...com</Link></li>
+              <li><span className="font-bold text-black block truncate">Avanza Financial (Sede USA)</span></li>
+              <li><span className="hover:text-black block leading-snug">Oficina Principal<br/>801 Brickell Ave, Suite 900<br/>Miami, FL 33131, EE. UU.</span></li>
+              <li className="pt-2"><span className="font-bold text-black block truncate">Atención al Cliente</span></li>
+              <li><span className="hover:text-black block truncate">+1 (305) 555-1234</span></li>
+              <li><Link href="mailto:contacto@avanzafinancial.com" className="hover:text-black block truncate">contacto@avanzafinancial.com</Link></li>
             </ul>
           </div>
 

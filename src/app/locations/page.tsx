@@ -71,24 +71,24 @@ export default function LocationsPage() {
           <div className="divide-y">
             {/* Location 1 */}
             <div className="p-6 hover:bg-muted/10 transition-colors">
-              <h3 className="font-bold text-lg mb-2 text-foreground">Los Angeles - Main St</h3>
+              <h3 className="font-bold text-lg mb-2 text-foreground">Miami - Sede Principal</h3>
               <div className="flex items-start gap-2 text-muted-foreground mb-3">
                 <MapPin className="h-5 w-5 shrink-0 mt-0.5 text-primary" />
                 <p className="text-sm">
-                  1234 S Main Street<br />
-                  Los Angeles, CA 90015
+                  801 Brickell Ave, Suite 900<br />
+                  Miami, FL 33131, EE. UU.
                 </p>
               </div>
-              <div className="bg-red-50 text-red-700 text-xs font-semibold p-2 rounded-md flex items-center gap-2 mb-4 border border-red-100">
+              <div className="bg-[#00d65f]/10 text-[#00d65f] text-xs font-semibold p-2 rounded-md flex items-center gap-2 mb-4 border border-[#00d65f]/20">
                 <Clock className="w-4 h-4 shrink-0" />
-                Tiempo de espera estimado: 45 min
+                Horario: L-V 9am - 5pm
               </div>
               <div className="flex flex-col gap-2">
                 <Button size="sm" className="w-full rounded-full bg-[#00d65f] text-black hover:bg-[#00d65f]/90 font-bold" asChild>
                   <Link href="/apply">Evitar fila y Aplicar en Línea</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="w-full rounded-full text-xs" asChild>
-                  <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Ver indicaciones</a>
+                  <a href="https://maps.google.com/?q=801+Brickell+Ave,+Miami,+FL+33131" target="_blank" rel="noopener noreferrer">Ver indicaciones</a>
                 </Button>
               </div>
             </div>
