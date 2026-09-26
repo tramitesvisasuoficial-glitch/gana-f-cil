@@ -146,7 +146,7 @@ export default function LocationsPage() {
         {/* Right Side: Real Interactive Map */}
         <div className="w-full md:w-2/3 lg:w-3/4 h-[400px] md:h-full relative bg-[#e5e3df]">
           <iframe 
-            src="https://www.google.com/maps?q=801+Brickell+Ave,+Miami,+FL+33131&output=embed" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.076867634289!2d-80.19253452458428!3d25.7679803773489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69b6a51d087%3A0xe543fa02dc70a271!2s801%20Brickell%20Ave%20%23900%2C%20Miami%2C%20FL%2033131%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
