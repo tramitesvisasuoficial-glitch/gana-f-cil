@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Globe, Menu, X, TrendingUp } from "lucide-react";
+import { Globe, Menu, X, TrendingUp, MapPin } from "lucide-react";
 
 export function Navbar() {
   const [lang, setLang] = useState("English");
@@ -51,8 +51,9 @@ export function Navbar() {
               </div>
             </div>
             
-            <Link href="/locations" className="text-xs font-bold text-black py-4 whitespace-nowrap hover:underline">
-              Sucursales
+            <Link href="/locations" className="flex items-center gap-1 text-xs font-bold text-[#00d65f] py-2 whitespace-nowrap hover:bg-[#00d65f]/20 bg-[#00d65f]/10 px-3 rounded-full ml-2 transition-colors">
+              <MapPin className="w-4 h-4" />
+              Nuestra Oficina USA
             </Link>
           </div>
         </div>
@@ -95,8 +96,9 @@ export function Navbar() {
 
             <div className="h-px bg-gray-100 w-full"></div>
             
-            <Link href="/locations" onClick={() => setIsMobileMenuOpen(false)} className="text-base font-bold text-black py-2">
-              Sucursales
+            <Link href="/locations" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 text-base font-bold text-[#00d65f] py-2 bg-[#00d65f]/10 px-4 rounded-lg">
+              <MapPin className="w-5 h-5" />
+              Nuestra Oficina USA
             </Link>
             
 
