@@ -146,7 +146,7 @@ export default function LocationsPage() {
         {/* Right Side: Real Interactive Map */}
         <div className="w-full md:w-2/3 lg:w-3/4 h-[400px] md:h-full relative bg-[#e5e3df]">
           <iframe 
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=801%20Brickell%20Ave,%20Miami,%20FL+(Avanza%20Financial)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+            src="https://www.google.com/maps?q=801+Brickell+Ave,+Miami,+FL+33131&output=embed" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
