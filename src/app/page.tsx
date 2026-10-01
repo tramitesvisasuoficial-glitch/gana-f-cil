@@ -173,13 +173,17 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-6">
             
-            {/* Left: Image */}
-            <div className="w-full md:w-1/2 order-2 md:order-1">
-              <img 
-                src="/images/family.jpg" 
-                alt="Familia cocinando feliz" 
-                className="w-full h-auto object-cover rounded-[16px]"
-              />
+            {/* Left: Video */}
+            <div className="w-full md:w-1/2 flex justify-center items-center order-2 md:order-1">
+              <div className="relative rounded-[20px] overflow-hidden shadow-[0_12px_40px_rgb(0,0,0,0.18)] max-w-[220px] w-full aspect-[9/16] bg-black border-[4px] border-black">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[36px] h-[8px] bg-black rounded-b-[6px] z-20"></div>
+                <video
+                  src="/avanza.mp4"
+                  controls
+                  playsInline
+                  className="w-full h-full object-cover relative z-10"
+                />
+              </div>
             </div>
 
             {/* Right: Content */}
