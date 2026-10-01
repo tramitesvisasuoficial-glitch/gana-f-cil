@@ -213,7 +213,7 @@ export default function LocationsPage() {
         <div className="w-full md:w-2/3 lg:w-3/4 h-[400px] md:h-full relative bg-[#e5e3df]">
           {selectedLocation ? (
             <iframe 
-              src={selectedLocation.embed}
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(selectedLocation.address + ', ' + selectedLocation.city + ', ' + selectedLocation.state)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
