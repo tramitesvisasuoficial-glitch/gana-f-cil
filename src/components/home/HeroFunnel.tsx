@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export function HeroFunnel() {
   const router = useRouter();
   const [step, setStep] = useState(1);
-  const [amount, setAmount] = useState<number | null>(null);
+  const [amount, setAmount] = useState<number | null>(5000);
   const [isOtherAmount, setIsOtherAmount] = useState(false);
   const [customAmount, setCustomAmount] = useState("");
 
